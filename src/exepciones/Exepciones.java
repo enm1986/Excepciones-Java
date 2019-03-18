@@ -25,13 +25,13 @@ public class Exepciones {
         try {
             num = pedirNumero("numerador");
             den = pedirNumero("denominador");
-            System.out.println("La división es: "+dividir(num, den));
-        } catch (DividirPorZeroException e) {
-            System.out.println("División por 0");
-            System.out.println(e.getMessage());
-            System.out.println(e.getClass());
+            System.out.println("La división es: " + dividir(num, den));
         } catch (InputMismatchException e) {
             System.out.println("No has introducido un número entero");
+            System.out.println(e.getMessage());
+            System.out.println(e.getClass());
+        } catch (DividirPorZeroException e) {
+            System.out.println("División por 0");
             System.out.println(e.getMessage());
             System.out.println(e.getClass());
         }
@@ -45,7 +45,7 @@ public class Exepciones {
     }
 
     public static int dividir(int num, int den) throws DividirPorZeroException {
-        if (den==0){
+        if (den == 0) {
             throw new DividirPorZeroException("Has dividido por 0, muy bien campeón");
         }
         return (num / den);
