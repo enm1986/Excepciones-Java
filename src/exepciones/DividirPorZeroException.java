@@ -5,6 +5,8 @@
  */
 package exepciones;
 
+import java.io.IOException;
+
 /**
  *
  * @author navar
